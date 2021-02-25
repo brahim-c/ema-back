@@ -1,6 +1,6 @@
 # EMA kata
 
-Lien de la repository react app : https://github.com/brahim-c/ema-front.git
+Lien de la repository react app : https://github.com/brahim-c/ema-front.git                                                                                                         
 1- faire cloner la repo ema-back
 2- installer les dependences avec maven
 3-lancer l'app
