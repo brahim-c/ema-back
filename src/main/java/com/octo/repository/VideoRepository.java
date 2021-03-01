@@ -11,12 +11,4 @@ import java.util.List;
 
 public interface VideoRepository extends JpaRepository<Video, String>, VideoCustomRepository, JpaSpecificationExecutor<Video> {
 
-
-
-//    @Query("FROM Video WHERE Video.level = ?1")
-//    List<Video> findByLevel(Level level);
-//
-//    @Query("FROM Video WHERE Video.tags in (:tags)")
-//    List<Video> findByTags(List<String> tags);
-
 }
