@@ -3,16 +3,24 @@ package com.octo.mappers;
 import com.octo.domain.enums.Level;
 import com.octo.domain.video.Video;
 import com.octo.dto.video.VideoDTO;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-
+import org.junit.jupiter.api.TestInstance;
+import org.junit.jupiter.api.condition.DisabledOnOs;
+import org.junit.jupiter.api.condition.EnabledOnOs;
+import org.junit.jupiter.api.condition.OS;
+import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assumptions.*;
 
 import java.util.Arrays;
-import static org.junit.jupiter.api.Assertions.*;
 
+
+@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 class VideoToVideoDTOMapperTest {
 
     @Test
-    void Should_Map_vid_To_VidDto() {
+    @DisplayName("---Testing method Map_vid_To_VidDto---")
+     void Should_Map_vid_To_VidDto() {
 
         Video video = new Video();
 
@@ -23,6 +31,8 @@ class VideoToVideoDTOMapperTest {
         video.setLevel(Level.EASY);
         video.setDuration(Double.valueOf(56));
         video.setUrl("url");
+
+        assumeTrue(true);
 
 
         VideoDTO videoDTO = VideoToVideoDTOMapper.convert(video);

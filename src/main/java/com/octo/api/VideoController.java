@@ -30,8 +30,10 @@ public class VideoController {
 
     @ApiOperation(value = " Liste des videos des cours par tags ou/et niveau")
     @GetMapping(value = ApiPaths.VIDEOS, produces = {MediaType.APPLICATION_JSON_UTF8_VALUE})
-    public List<VideoDTO> getVideos(@ApiParam(value = ParamDescription.LEVEL_PARAM) @RequestParam(required = false) Level level,
-                                    @ApiParam(value = ParamDescription.TAGS_PARAM) @RequestParam(required = false) List<String> tags) {
+    public List<VideoDTO> getVideos(@ApiParam(value = ParamDescription.LEVEL_PARAM)
+                                        @RequestParam(required = false) Level level,
+                                        @ApiParam(value = ParamDescription.TAGS_PARAM)
+                                        @RequestParam(required = false) List<String> tags) {
         LOGGER.info("Récupération des videos des cours par tags ou/et niveau");
         return videoService.retrieveVideosByTagAndLevel(tags, level);
     }

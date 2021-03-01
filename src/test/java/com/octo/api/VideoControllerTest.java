@@ -13,6 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
@@ -32,7 +33,7 @@ public class VideoControllerTest {
     MockMvc mockMvc;
 
     @Before
-    public void setUp() {
+     void setUp() {
         mockMvc = MockMvcBuilders.standaloneSetup(videoController).build();
     }
 
